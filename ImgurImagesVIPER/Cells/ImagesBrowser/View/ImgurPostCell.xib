@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="223" id="Sdg-B0-tKQ" customClass="ImgurPostCell" customModule="ImgurImagesVIPER" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="223"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sdg-B0-tKQ" id="l0D-qp-Ybn">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="223"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading…" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMw-Ma-Xgv">
+                        <rect key="frame" x="168" y="101" width="78.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rL4-g0-i2E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="218"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="218" id="5Q3-5G-o4I"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="FMw-Ma-Xgv" firstAttribute="centerY" secondItem="l0D-qp-Ybn" secondAttribute="centerY" id="8A1-E5-bbW"/>
+                    <constraint firstItem="rL4-g0-i2E" firstAttribute="leading" secondItem="l0D-qp-Ybn" secondAttribute="leading" id="BDl-ny-Rkw"/>
+                    <constraint firstItem="rL4-g0-i2E" firstAttribute="top" secondItem="l0D-qp-Ybn" secondAttribute="top" id="Tae-d8-Dti"/>
+                    <constraint firstAttribute="bottom" secondItem="rL4-g0-i2E" secondAttribute="bottom" constant="5" id="cE8-h1-acA"/>
+                    <constraint firstItem="FMw-Ma-Xgv" firstAttribute="centerX" secondItem="l0D-qp-Ybn" secondAttribute="centerX" id="rfY-wT-0YV"/>
+                    <constraint firstAttribute="trailing" secondItem="rL4-g0-i2E" secondAttribute="trailing" id="u6A-g0-9sK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="hConstraint" destination="5Q3-5G-o4I" id="zRb-Fl-kHI"/>
+                <outlet property="postImage" destination="rL4-g0-i2E" id="5xp-Ea-C5B"/>
+            </connections>
+            <point key="canvasLocation" x="-26.086956521739133" y="-122.20982142857142"/>
+        </tableViewCell>
+    </objects>
+</document>
