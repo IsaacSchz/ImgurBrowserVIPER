@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct ImagesBrowserRequestManager: ImagesBrowserRequestManagerProtocol {
-    
+class ImagesBrowserRequestManager: ImagesBrowserRequestManagerProtocol {
+
     /// - Parameters:
+    ///   - keyword: The word to be searched
     ///   - session: The URLSession
-    ///   - manager: The networking manager
     ///   - success: The success complition handler
     ///   - failure: The failure complition handler
     func fetchPosts (
@@ -26,7 +26,7 @@ struct ImagesBrowserRequestManager: ImagesBrowserRequestManagerProtocol {
         urlRequest.setValue("Client-ID \(ServiceConstants.clientId)", forHTTPHeaderField: "Authorization")
         
         NetworkManager.pullData(with: session, request: urlRequest,
-                         success: { (responseData: Data) in
+                         success: { (responseData: Data, _) in
                             do {
                                 let jsonDecoder = JSONDecoder()
                                 let result = try jsonDecoder.decode(ImgurResponse.self, from: responseData)
@@ -35,10 +35,32 @@ struct ImagesBrowserRequestManager: ImagesBrowserRequestManagerProtocol {
                             } catch {
                                 failure(ServiceConstants.NetworkingError.invalidData)
                             } },
-                         
+
                          failure: { error in
                             failure(error)
         })
     }
     
+    /// - Parameters:
+    ///   - url:     The image URL
+    ///   - session: The URLSession
+    ///   - success: The success complition handler
+    ///   - failure: The failure complition handler
+    func downloadImage(
+        with url: URL,
+        with session: URLSessionProtocol,
+        success: @escaping (Data) -> Void,
+        failure: @escaping (ServiceConstants.NetworkingError) -> Void) {
+
+        let urlRequest = URLRequest(url: url)
+        NetworkManager.pullData(with: session, request: urlRequest,
+                        success: { (responseData: Data, response) in
+                            guard response.statusCode == 200, let mimeType = response.mimeType, mimeType.hasPrefix("image") else { return }
+                            success(responseData) },
+
+                        failure: { error in
+                            failure(error)
+                        })
+    }
+
 }

@@ -6,7 +6,7 @@
 //  Copyright © 2020 Isaac Sanchez. All rights reserved.
 //
 
-protocol ImageDetailRequestManagerProtocol {
+protocol ImageDetailRequestManagerProtocol: class {
     
     func fetchComments(
         forId postId: String,

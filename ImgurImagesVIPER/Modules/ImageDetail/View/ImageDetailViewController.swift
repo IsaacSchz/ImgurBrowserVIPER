@@ -21,13 +21,6 @@ class ImageDetailViewController: UIViewController {
     // MARK: - VARIABLES
     var presenter: ImageDetailPresenterProtocol?
     
-    var detailedImage: DetailedImagePresenter? {
-        didSet {
-            guard let imageURL = detailedImage?.imageURL else { return }
-            detailedImageView?.download(from: imageURL)
-        }
-    }
-    
     var comments: [ImgurCommentCellPresenter]? {
         didSet {
             commentsTableView?.reloadData()
@@ -35,7 +28,7 @@ class ImageDetailViewController: UIViewController {
     }
     
     var postId: String = ""
-    var postImageURL: URL?
+    var postImageData: Data?
     
     
     // MARK: - VIEW CONTROLLER
@@ -44,7 +37,11 @@ class ImageDetailViewController: UIViewController {
         super.viewDidLoad()
         
         setupTableView()
-        presenter?.updateImageDetail(with: postId, imageURL: postImageURL)
+        
+        presenter?.updateComments(with: postId)
+        
+        guard let data = postImageData else { return }
+        detailedImageView?.image = UIImage(data: data)
     }
     
     func setupTableView() {
@@ -79,9 +76,12 @@ extension ImageDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImgurCommentCell", for: indexPath) as? ImgurCommentCell, let commentLabel = cell.commentLabel else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImgurCommentCell", for: indexPath) as? ImgurCommentCell else { return UITableViewCell() }
+        
         guard let commentInfo = comments?[indexPath.row] else { return UITableViewCell() }
-        commentLabel.text = commentInfo.comment
+        commentInfo.setView(cell)
+        commentInfo.updateComment()
+        
         return cell
     }
 

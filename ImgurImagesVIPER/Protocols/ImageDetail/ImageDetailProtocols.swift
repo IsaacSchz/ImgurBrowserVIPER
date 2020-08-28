@@ -8,11 +8,10 @@
 
 import Foundation
 
-protocol ImageDetailViewProtocol {
+protocol ImageDetailViewProtocol: class {
     
     // MARK: - VARIABLES
     
-    var detailedImage: DetailedImagePresenter? { get set }
     var comments: [ImgurCommentCellPresenter]? { get set }
     
     
@@ -23,14 +22,16 @@ protocol ImageDetailViewProtocol {
     
 }
 
-protocol ImageDetailPresenterProtocol {
+protocol ImageDetailPresenterProtocol: class {
     
     // MARK: - FUNCTIONS
     
-    func updateImageDetail(with postId: String, imageURL: URL?)
+    func updateComments(with postId: String)
     
 }
 
-protocol ImageDetailInteractorProtocol {
+protocol ImageDetailInteractorProtocol: class {
+    
     func fetchComments(forId postId: String, completion: @escaping (Result<[ImgurComment], ServiceConstants.NetworkingError>) -> Void)
+    
 }

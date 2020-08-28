@@ -114,7 +114,7 @@ class ServiceUniTest: XCTestCase {
         session.testData = data
         guard let testURL = URL(string: "www.dummy_url.com") else {  XCTFail("Invalid dummy url"); return }
         
-        NetworkManager.pullData(with: session, request: URLRequest(url: testURL), success: { _ in
+        NetworkManager.pullData(with: session, request: URLRequest(url: testURL), success: { _,_  in
             XCTFail()
         }) { error in
             if error == ServiceConstants.NetworkingError.responseError {

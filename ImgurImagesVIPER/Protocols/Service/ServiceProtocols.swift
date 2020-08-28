@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol URLSessionProtocol {
+protocol URLSessionProtocol: class {
     
     func dataTask(with urlRequest: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
     

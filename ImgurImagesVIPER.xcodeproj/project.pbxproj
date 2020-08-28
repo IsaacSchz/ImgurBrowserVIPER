@@ -54,14 +54,27 @@
 		6A61910824DA100D00BA7CCC /* ImageDetailServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A61910724DA100D00BA7CCC /* ImageDetailServiceProtocols.swift */; };
 		6A61910B24DA10A600BA7CCC /* ImageDetailRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A61910A24DA10A600BA7CCC /* ImageDetailRequestManager.swift */; };
 		6A61910D24DA112C00BA7CCC /* ImgurCommentsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A61910C24DA112C00BA7CCC /* ImgurCommentsRequest.swift */; };
-		6A61910F24DA14A400BA7CCC /* DetailedImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A61910E24DA14A400BA7CCC /* DetailedImagePresenter.swift */; };
-		6A61911024DA165800BA7CCC /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6190DA24D9F9F100BA7CCC /* UIImageView+Extensions.swift */; };
 		6A61911224DA1E8600BA7CCC /* ViewControllerInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A61911124DA1E8600BA7CCC /* ViewControllerInstantiatable.swift */; };
 		6A61911424DA1F4200BA7CCC /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A61911324DA1F4200BA7CCC /* BaseWireframe.swift */; };
 		6A61911C24DA21F400BA7CCC /* BadPostsMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 6A61911824DA21F400BA7CCC /* BadPostsMock.json */; };
 		6A61911D24DA21F400BA7CCC /* CommentsMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 6A61911924DA21F400BA7CCC /* CommentsMock.json */; };
 		6A61911E24DA21F400BA7CCC /* BadCommentsMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 6A61911A24DA21F400BA7CCC /* BadCommentsMock.json */; };
 		6A61911F24DA21F400BA7CCC /* PostsMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 6A61911B24DA21F400BA7CCC /* PostsMock.json */; };
+		6A98D1F324EB2CC100FE49B2 /* ImgurPostCellInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A98D1F224EB2CC100FE49B2 /* ImgurPostCellInteractor.swift */; };
+		6A98D1F624EB327B00FE49B2 /* ImgurPostCellProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A98D1F524EB327B00FE49B2 /* ImgurPostCellProtocols.swift */; };
+		6A98D1F924EB605300FE49B2 /* ImgurCommentCellProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A98D1F824EB605300FE49B2 /* ImgurCommentCellProtocols.swift */; };
+		6A98D1FC24EB616800FE49B2 /* ImgurCommentCellInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A98D1FB24EB616800FE49B2 /* ImgurCommentCellInteractor.swift */; };
+		6A98D1FF24EB6A3A00FE49B2 /* MockImgurPostCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A98D1FE24EB6A3A00FE49B2 /* MockImgurPostCellView.swift */; };
+		6A98D20124EB6A9700FE49B2 /* MockImgurPostCellInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A98D20024EB6A9700FE49B2 /* MockImgurPostCellInteractor.swift */; };
+		6AD0942A24EC584500BA2016 /* MockImgurPostCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD0942924EC584500BA2016 /* MockImgurPostCellPresenter.swift */; };
+		6AD0942E24EC622F00BA2016 /* MockImgurCommentCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD0942D24EC622F00BA2016 /* MockImgurCommentCellView.swift */; };
+		6AD0943024EC65F100BA2016 /* MockImgurCommentCellInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD0942F24EC65F100BA2016 /* MockImgurCommentCellInteractor.swift */; };
+		6AD0943224EC661C00BA2016 /* MockImgurCommentCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD0943124EC661C00BA2016 /* MockImgurCommentCellPresenter.swift */; };
+		6AD0943524EC667F00BA2016 /* ImgurPostCellViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD0943424EC667F00BA2016 /* ImgurPostCellViewTest.swift */; };
+		6AD0943924EC70A600BA2016 /* ImgurPostCellInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD0943824EC70A600BA2016 /* ImgurPostCellInteractorTest.swift */; };
+		6AD0943B24EC716700BA2016 /* ImgurPostCellPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD0943A24EC716700BA2016 /* ImgurPostCellPresenterTest.swift */; };
+		6AD0943F24EC735A00BA2016 /* ImgurCommentCellViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD0943E24EC735A00BA2016 /* ImgurCommentCellViewTest.swift */; };
+		6AD0944124EC76EA00BA2016 /* ImgurCommentCellPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD0944024EC76EA00BA2016 /* ImgurCommentCellPresenterTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,7 +122,6 @@
 		6A6190D224D9F70F00BA7CCC /* ImgurPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurPostCell.swift; sourceTree = "<group>"; };
 		6A6190D424D9F77500BA7CCC /* ImgurPostCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurPostCellPresenter.swift; sourceTree = "<group>"; };
 		6A6190D624D9F7B900BA7CCC /* ImgurPostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImgurPostCell.xib; sourceTree = "<group>"; };
-		6A6190DA24D9F9F100BA7CCC /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		6A6190DC24D9FB0100BA7CCC /* ServiceProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocols.swift; sourceTree = "<group>"; };
 		6A6190E124D9FBFB00BA7CCC /* ImageBrowserServiceProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBrowserServiceProtocols.swift; sourceTree = "<group>"; };
 		6A6190E524D9FCC500BA7CCC /* ImagesBrowserRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesBrowserRequestManager.swift; sourceTree = "<group>"; };
@@ -127,13 +139,27 @@
 		6A61910724DA100D00BA7CCC /* ImageDetailServiceProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailServiceProtocols.swift; sourceTree = "<group>"; };
 		6A61910A24DA10A600BA7CCC /* ImageDetailRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailRequestManager.swift; sourceTree = "<group>"; };
 		6A61910C24DA112C00BA7CCC /* ImgurCommentsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurCommentsRequest.swift; sourceTree = "<group>"; };
-		6A61910E24DA14A400BA7CCC /* DetailedImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedImagePresenter.swift; sourceTree = "<group>"; };
 		6A61911124DA1E8600BA7CCC /* ViewControllerInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInstantiatable.swift; sourceTree = "<group>"; };
 		6A61911324DA1F4200BA7CCC /* BaseWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
 		6A61911824DA21F400BA7CCC /* BadPostsMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BadPostsMock.json; sourceTree = "<group>"; };
 		6A61911924DA21F400BA7CCC /* CommentsMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CommentsMock.json; sourceTree = "<group>"; };
 		6A61911A24DA21F400BA7CCC /* BadCommentsMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BadCommentsMock.json; sourceTree = "<group>"; };
 		6A61911B24DA21F400BA7CCC /* PostsMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PostsMock.json; sourceTree = "<group>"; };
+		6A98D1F224EB2CC100FE49B2 /* ImgurPostCellInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurPostCellInteractor.swift; sourceTree = "<group>"; };
+		6A98D1F524EB327B00FE49B2 /* ImgurPostCellProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurPostCellProtocols.swift; sourceTree = "<group>"; };
+		6A98D1F824EB605300FE49B2 /* ImgurCommentCellProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurCommentCellProtocols.swift; sourceTree = "<group>"; };
+		6A98D1FB24EB616800FE49B2 /* ImgurCommentCellInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurCommentCellInteractor.swift; sourceTree = "<group>"; };
+		6A98D1FE24EB6A3A00FE49B2 /* MockImgurPostCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImgurPostCellView.swift; sourceTree = "<group>"; };
+		6A98D20024EB6A9700FE49B2 /* MockImgurPostCellInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImgurPostCellInteractor.swift; sourceTree = "<group>"; };
+		6AD0942924EC584500BA2016 /* MockImgurPostCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImgurPostCellPresenter.swift; sourceTree = "<group>"; };
+		6AD0942D24EC622F00BA2016 /* MockImgurCommentCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImgurCommentCellView.swift; sourceTree = "<group>"; };
+		6AD0942F24EC65F100BA2016 /* MockImgurCommentCellInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImgurCommentCellInteractor.swift; sourceTree = "<group>"; };
+		6AD0943124EC661C00BA2016 /* MockImgurCommentCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImgurCommentCellPresenter.swift; sourceTree = "<group>"; };
+		6AD0943424EC667F00BA2016 /* ImgurPostCellViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurPostCellViewTest.swift; sourceTree = "<group>"; };
+		6AD0943824EC70A600BA2016 /* ImgurPostCellInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurPostCellInteractorTest.swift; sourceTree = "<group>"; };
+		6AD0943A24EC716700BA2016 /* ImgurPostCellPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurPostCellPresenterTest.swift; sourceTree = "<group>"; };
+		6AD0943E24EC735A00BA2016 /* ImgurCommentCellViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurCommentCellViewTest.swift; sourceTree = "<group>"; };
+		6AD0944024EC76EA00BA2016 /* ImgurCommentCellPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurCommentCellPresenterTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +205,7 @@
 		6A3C1AD624DB39CB008098D5 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				6AD0943324EC664F00BA2016 /* CellsTests */,
 				6A3C1AD824DB39E7008098D5 /* ImagesBrowserTests */,
 				6A3C1ADF24DB47F5008098D5 /* ImageDetailTests */,
 			);
@@ -361,7 +388,9 @@
 		6A6190CE24D9F6C900BA7CCC /* ImagesBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				6A98D1F424EB326B00FE49B2 /* Protocols */,
 				6A6190CF24D9F6D000BA7CCC /* View */,
+				6A98D1F124EB2C9500FE49B2 /* Interactor */,
 				6A6190D024D9F6D400BA7CCC /* Presenter */,
 			);
 			path = ImagesBrowser;
@@ -387,7 +416,6 @@
 		6A6190D924D9F9DE00BA7CCC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				6A6190DA24D9F9F100BA7CCC /* UIImageView+Extensions.swift */,
 				6A61911124DA1E8600BA7CCC /* ViewControllerInstantiatable.swift */,
 				6A61911324DA1F4200BA7CCC /* BaseWireframe.swift */,
 			);
@@ -484,7 +512,9 @@
 		6A6190FE24DA0D5000BA7CCC /* ImageDetail */ = {
 			isa = PBXGroup;
 			children = (
+				6A98D1F724EB604300FE49B2 /* Protocols */,
 				6A6190FF24DA0D5A00BA7CCC /* View */,
+				6A98D1FA24EB615600FE49B2 /* Interactor */,
 				6A61910024DA0D6000BA7CCC /* Presenter */,
 			);
 			path = ImageDetail;
@@ -502,7 +532,6 @@
 		6A61910024DA0D6000BA7CCC /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				6A61910E24DA14A400BA7CCC /* DetailedImagePresenter.swift */,
 				6A61910524DA0E2900BA7CCC /* ImgurCommentCellPresenter.swift */,
 			);
 			path = Presenter;
@@ -530,6 +559,7 @@
 			isa = PBXGroup;
 			children = (
 				6A3C1AE824DB7ADB008098D5 /* MockServiceClasses.swift */,
+				6A98D1FD24EB6A1800FE49B2 /* MockCells */,
 				6A3C1AC424DB17F2008098D5 /* MockImagesBrowser */,
 				6A3C1ACD24DB19C0008098D5 /* MockImageDetail */,
 			);
@@ -545,6 +575,95 @@
 				6A61911B24DA21F400BA7CCC /* PostsMock.json */,
 			);
 			path = JSONMocks;
+			sourceTree = "<group>";
+		};
+		6A98D1F124EB2C9500FE49B2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				6A98D1F224EB2CC100FE49B2 /* ImgurPostCellInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		6A98D1F424EB326B00FE49B2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6A98D1F524EB327B00FE49B2 /* ImgurPostCellProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		6A98D1F724EB604300FE49B2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6A98D1F824EB605300FE49B2 /* ImgurCommentCellProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		6A98D1FA24EB615600FE49B2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				6A98D1FB24EB616800FE49B2 /* ImgurCommentCellInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		6A98D1FD24EB6A1800FE49B2 /* MockCells */ = {
+			isa = PBXGroup;
+			children = (
+				6AD0942B24EC620000BA2016 /* PostCell */,
+				6AD0942C24EC620D00BA2016 /* CommentCell */,
+			);
+			path = MockCells;
+			sourceTree = "<group>";
+		};
+		6AD0942B24EC620000BA2016 /* PostCell */ = {
+			isa = PBXGroup;
+			children = (
+				6A98D1FE24EB6A3A00FE49B2 /* MockImgurPostCellView.swift */,
+				6A98D20024EB6A9700FE49B2 /* MockImgurPostCellInteractor.swift */,
+				6AD0942924EC584500BA2016 /* MockImgurPostCellPresenter.swift */,
+			);
+			path = PostCell;
+			sourceTree = "<group>";
+		};
+		6AD0942C24EC620D00BA2016 /* CommentCell */ = {
+			isa = PBXGroup;
+			children = (
+				6AD0942D24EC622F00BA2016 /* MockImgurCommentCellView.swift */,
+				6AD0942F24EC65F100BA2016 /* MockImgurCommentCellInteractor.swift */,
+				6AD0943124EC661C00BA2016 /* MockImgurCommentCellPresenter.swift */,
+			);
+			path = CommentCell;
+			sourceTree = "<group>";
+		};
+		6AD0943324EC664F00BA2016 /* CellsTests */ = {
+			isa = PBXGroup;
+			children = (
+				6AD0943C24EC733300BA2016 /* PostCell */,
+				6AD0943D24EC734100BA2016 /* CommentCell */,
+			);
+			path = CellsTests;
+			sourceTree = "<group>";
+		};
+		6AD0943C24EC733300BA2016 /* PostCell */ = {
+			isa = PBXGroup;
+			children = (
+				6AD0943424EC667F00BA2016 /* ImgurPostCellViewTest.swift */,
+				6AD0943824EC70A600BA2016 /* ImgurPostCellInteractorTest.swift */,
+				6AD0943A24EC716700BA2016 /* ImgurPostCellPresenterTest.swift */,
+			);
+			path = PostCell;
+			sourceTree = "<group>";
+		};
+		6AD0943D24EC734100BA2016 /* CommentCell */ = {
+			isa = PBXGroup;
+			children = (
+				6AD0943E24EC735A00BA2016 /* ImgurCommentCellViewTest.swift */,
+				6AD0944024EC76EA00BA2016 /* ImgurCommentCellPresenterTest.swift */,
+			);
+			path = CommentCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -654,12 +773,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A61911024DA165800BA7CCC /* UIImageView+Extensions.swift in Sources */,
-				6A61910F24DA14A400BA7CCC /* DetailedImagePresenter.swift in Sources */,
 				6A61911424DA1F4200BA7CCC /* BaseWireframe.swift in Sources */,
 				6A6190D524D9F77500BA7CCC /* ImgurPostCellPresenter.swift in Sources */,
 				6A6190FA24DA0C5700BA7CCC /* ImageDetailWireframe.swift in Sources */,
 				6A61910B24DA10A600BA7CCC /* ImageDetailRequestManager.swift in Sources */,
+				6A98D1F624EB327B00FE49B2 /* ImgurPostCellProtocols.swift in Sources */,
 				6A6190F424DA0C3500BA7CCC /* ImageDetailInteractor.swift in Sources */,
 				6A61910624DA0E2900BA7CCC /* ImgurCommentCellPresenter.swift in Sources */,
 				6A61907524D9F23600BA7CCC /* AppDelegate.swift in Sources */,
@@ -668,13 +786,16 @@
 				6A6190FD24DA0CA700BA7CCC /* ImageDetailProtocols.swift in Sources */,
 				6A6190C524D9F36E00BA7CCC /* ImagesBrowserWireframe.swift in Sources */,
 				6A61910D24DA112C00BA7CCC /* ImgurCommentsRequest.swift in Sources */,
+				6A98D1FC24EB616800FE49B2 /* ImgurCommentCellInteractor.swift in Sources */,
 				6A61910824DA100D00BA7CCC /* ImageDetailServiceProtocols.swift in Sources */,
 				6A6190CD24D9F50B00BA7CCC /* ImagesBrowserProtocols.swift in Sources */,
 				6A6190BD24D9F33400BA7CCC /* ImagesBrowserViewController.swift in Sources */,
 				6A6190EA24D9FDA300BA7CCC /* ImgurRequest.swift in Sources */,
 				6A6190E824D9FCF200BA7CCC /* NetworkManager.swift in Sources */,
+				6A98D1F324EB2CC100FE49B2 /* ImgurPostCellInteractor.swift in Sources */,
 				6A6190D324D9F70F00BA7CCC /* ImgurPostCell.swift in Sources */,
 				6A6190F624DA0C4000BA7CCC /* ImageDetailPresenter.swift in Sources */,
+				6A98D1F924EB605300FE49B2 /* ImgurCommentCellProtocols.swift in Sources */,
 				6A6190F824DA0C4900BA7CCC /* ImageDetailEntity.swift in Sources */,
 				6A6190C124D9F35100BA7CCC /* ImagesBrowserPresenter.swift in Sources */,
 				6A6190C324D9F35F00BA7CCC /* ImgurPostEntity.swift in Sources */,
@@ -692,20 +813,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A3C1ADC24DB403A008098D5 /* ImagesBrowserInteractorTests.swift in Sources */,
+				6AD0943F24EC735A00BA2016 /* ImgurCommentCellViewTest.swift in Sources */,
 				6A3C1AE324DB6854008098D5 /* ImageDetailInteractorTest.swift in Sources */,
 				6A3C1AD324DB38ED008098D5 /* MockImageDetailPresenter.swift in Sources */,
+				6AD0943924EC70A600BA2016 /* ImgurPostCellInteractorTest.swift in Sources */,
 				6A3C1AEB24DB7B0A008098D5 /* MockServiceClasses.swift in Sources */,
+				6AD0943B24EC716700BA2016 /* ImgurPostCellPresenterTest.swift in Sources */,
 				6A3C1AD524DB393D008098D5 /* MockImageDetailRequestManager.swift in Sources */,
+				6AD0942E24EC622F00BA2016 /* MockImgurCommentCellView.swift in Sources */,
+				6AD0942A24EC584500BA2016 /* MockImgurPostCellPresenter.swift in Sources */,
 				6A3C1ACC24DB196D008098D5 /* MockImagesBrowserRequestManager.swift in Sources */,
 				6A3C1AE124DB5B2D008098D5 /* ImageDetailViewTests.swift in Sources */,
+				6A98D20124EB6A9700FE49B2 /* MockImgurPostCellInteractor.swift in Sources */,
 				6A3C1ACA24DB190D008098D5 /* MockImagesBrowserInteractor.swift in Sources */,
+				6AD0943524EC667F00BA2016 /* ImgurPostCellViewTest.swift in Sources */,
 				6A3C1AD124DB3784008098D5 /* MockImageDetailInteractor.swift in Sources */,
 				6A3C1ACF24DB3727008098D5 /* MockImageDetailView.swift in Sources */,
 				6A3C1AE524DB6946008098D5 /* ImageDetailPresenterTests.swift in Sources */,
 				6A3C1AC824DB18B4008098D5 /* MockImagesBrowserPresenter.swift in Sources */,
 				6A3C1AE724DB7906008098D5 /* ServiceUniTest.swift in Sources */,
 				6A3C1AC624DB181C008098D5 /* MockImagesBrowserView.swift in Sources */,
+				6AD0943224EC661C00BA2016 /* MockImgurCommentCellPresenter.swift in Sources */,
+				6AD0944124EC76EA00BA2016 /* ImgurCommentCellPresenterTest.swift in Sources */,
+				6A98D1FF24EB6A3A00FE49B2 /* MockImgurPostCellView.swift in Sources */,
 				6A3C1ADA24DB3A2A008098D5 /* ImagesBrowserViewTests.swift in Sources */,
+				6AD0943024EC65F100BA2016 /* MockImgurCommentCellInteractor.swift in Sources */,
 				6A3C1ADE24DB41C4008098D5 /* ImagesBrowserPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

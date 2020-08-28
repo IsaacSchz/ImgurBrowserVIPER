@@ -11,12 +11,12 @@ import Foundation
 class ImageDetailWireframe: BaseWireframe {
     
     // MARK: - Module setup
-    init( _ postId: String, _ postImageURL: URL) {
+    init( _ postId: String, _ postImageData: Data?) {
         let moduleViewController = ImageDetailViewController.loadFromStoryboard(storyboardName: "Main")
         super.init(viewController: moduleViewController)
         
         moduleViewController.postId = postId
-        moduleViewController.postImageURL = postImageURL
+        moduleViewController.postImageData = postImageData
         
         let interactor = ImageDetailInteractor()
         let presenter = ImageDetailPresenter(view: moduleViewController, interactor: interactor)

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ImageDetailRequestManager: ImageDetailRequestManagerProtocol {
+class ImageDetailRequestManager: ImageDetailRequestManagerProtocol {
     
     /// - Parameters:
     ///   - session: The URLSession
@@ -26,7 +26,7 @@ struct ImageDetailRequestManager: ImageDetailRequestManagerProtocol {
         urlRequest.setValue("Client-ID \(ServiceConstants.clientId)", forHTTPHeaderField: "Authorization")
         
         NetworkManager.pullData(with: session, request: urlRequest,
-                         success: { (responseData: Data) in
+                         success: { (responseData: Data, _) in
                             do {
                                 let jsonDecoder = JSONDecoder()
                                 let result = try jsonDecoder.decode(ImgurCommentsResponse.self, from: responseData)

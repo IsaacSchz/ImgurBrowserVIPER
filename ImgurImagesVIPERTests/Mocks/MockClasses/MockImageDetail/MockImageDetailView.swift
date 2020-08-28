@@ -11,7 +11,6 @@ import Foundation
 
 class MockImageDetailView: ImageDetailViewProtocol {
     
-    var detailedImage: DetailedImagePresenter?
     var comments: [ImgurCommentCellPresenter]?
     
     var showNoCommentsViewCalled = false

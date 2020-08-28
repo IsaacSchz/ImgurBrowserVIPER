@@ -10,8 +10,6 @@ import Foundation
 
 struct NetworkManager {
     
-    private init() {}
-    
     /// Execute the request using the request data and the given session
     /// - Parameters:
     ///   - session: The injected URLSessionInterface
@@ -19,7 +17,7 @@ struct NetworkManager {
     ///   - success: The complition handler for success
     ///   - failure: The complition handler for the failure
     static func pullData(with session: URLSessionProtocol, request: URLRequest,
-                  success: @escaping (Data) -> Void, failure: @escaping (ServiceConstants.NetworkingError) -> Void) {
+                  success: @escaping (Data, HTTPURLResponse) -> Void, failure: @escaping (ServiceConstants.NetworkingError) -> Void) {
         
         session.dataTask(with: request) { (data, response, error) in
             
@@ -30,7 +28,7 @@ struct NetworkManager {
             
             if let data = data, let response = response as? HTTPURLResponse{
                 if  200...299 ~= response.statusCode {
-                    success(data)
+                    success(data, response)
                 } else {
                     failure(ServiceConstants.NetworkingError.responseError)
                 }

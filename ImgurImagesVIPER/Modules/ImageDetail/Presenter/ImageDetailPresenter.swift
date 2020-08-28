@@ -10,7 +10,7 @@ import Foundation
 
 class ImageDetailPresenter {
     
-    private var view: ImageDetailViewProtocol
+    private weak var view: ImageDetailViewProtocol?
     private var interactor: ImageDetailInteractorProtocol
     
     init(view: ImageDetailViewProtocol, interactor: ImageDetailInteractorProtocol) {
@@ -22,9 +22,8 @@ class ImageDetailPresenter {
 
 extension ImageDetailPresenter: ImageDetailPresenterProtocol {
     
-    func updateImageDetail(with postId: String, imageURL: URL?) {
+    func updateComments(with postId: String) {
         
-        self.loadImage(with: imageURL)
         interactor.fetchComments(forId: postId) { [weak self] (response) in
             self?.handleServiceResponse(response)
         }
@@ -37,14 +36,9 @@ extension ImageDetailPresenter: ImageDetailPresenterProtocol {
             case .success(let commentsResponse):
                 self?.setupComments(with: commentsResponse)
             case .failure:
-                self?.view.showNetworkingError()
+                self?.view?.showNetworkingError()
             }
         }
-    }
-    
-    func loadImage(with imageURL: URL?) {
-        guard let imageURL = imageURL else { return }
-        view.detailedImage = DetailedImagePresenter(imageURL: imageURL)
     }
     
     func setupComments(with comments: [ImgurComment]) {
@@ -52,12 +46,12 @@ extension ImageDetailPresenter: ImageDetailPresenterProtocol {
         
         comments.forEach { comment in
             guard let commentText = comment.text else { return }
-            let commentCell = ImgurCommentCellPresenter(comment: commentText)
+            let commentCell = ImgurCommentCellPresenter(view: nil, interactor: ImgurCommentCellInteractor(), comment: commentText)
             tempComments.append(commentCell)
         }
         
-        if tempComments.isEmpty { view.showNoCommentsView() }
-        view.comments = tempComments
+        if tempComments.isEmpty { view?.showNoCommentsView() }
+        view?.comments = tempComments
     }
     
 }

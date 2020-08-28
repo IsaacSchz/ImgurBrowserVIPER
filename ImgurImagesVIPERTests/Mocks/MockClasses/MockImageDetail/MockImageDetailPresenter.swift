@@ -11,12 +11,12 @@ import Foundation
 
 class MockImageDetailPresenter: ImageDetailPresenterProtocol {
     
-    var updateImageDetailCalled = false
+    var updateCommentsCalled = false
     
-    func updateImageDetail(with postId: String, imageURL: URL?) {
+    func updateComments(with postId: String) {
         
-        updateImageDetailCalled = true
+        updateCommentsCalled = true
         
     }
-
+    
 }

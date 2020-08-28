@@ -15,11 +15,14 @@ class ImgurPostCell: UITableViewCell {
     @IBOutlet weak var postImage: UIImageView?
     @IBOutlet weak var hConstraint: NSLayoutConstraint!
     
-    
-    // MARK: - VARIABLES
-    
-    var postId = ""
-    var imageUrl = ""
+    var imageData: Data? {
+        didSet {
+            DispatchQueue.main.async { [weak self] in
+                guard let data = self?.imageData else { return }
+                self?.postImage?.image = UIImage(data: data)
+            }
+        }
+    }
 
     
     // MARK: - VIEW
@@ -33,5 +36,9 @@ class ImgurPostCell: UITableViewCell {
         postImage?.image = nil
         hConstraint.constant = 218
     }
+
+}
+
+extension ImgurPostCell: ImgurPostCellViewProtocol {
 
 }

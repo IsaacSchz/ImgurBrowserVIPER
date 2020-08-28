@@ -32,6 +32,8 @@ struct ServiceConstants {
     // MARK: - VARIABLES
     
     static let baseURL = "https://api.imgur.com/3/gallery/"
+    
+    #error("TYPE YOUR API KEY HERE")
     static let clientId = "YOUR API KEY"
 
 }

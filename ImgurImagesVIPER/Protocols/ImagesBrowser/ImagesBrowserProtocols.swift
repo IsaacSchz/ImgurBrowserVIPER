@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ImagesBrowserViewProtocol {
+protocol ImagesBrowserViewProtocol: class {
     
     // MARK: - VARIABLES
     var posts: [ImgurPostCellPresenter]? { get set }
@@ -20,15 +20,15 @@ protocol ImagesBrowserViewProtocol {
     
 }
 
-protocol ImagesBrowserPresenterProtocol {
+protocol ImagesBrowserPresenterProtocol: class {
     
     // MARK: - FUNCTIONS
     
     func updatePosts(with keyword: String)
-    
+
 }
 
-protocol ImagesBrowserInteractorProtocol {
+protocol ImagesBrowserInteractorProtocol: class {
     
     func fetchPosts(by keyword: String, completion: @escaping (Result<[ImgurPost], ServiceConstants.NetworkingError>) -> Void)
     

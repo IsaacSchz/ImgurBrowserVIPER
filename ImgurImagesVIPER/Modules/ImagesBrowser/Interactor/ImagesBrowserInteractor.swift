@@ -19,7 +19,7 @@ class ImagesBrowserInteractor {
 }
 
 extension ImagesBrowserInteractor: ImagesBrowserInteractorProtocol {
-    
+
     func fetchPosts(by keyword: String, completion: @escaping (Result<[ImgurPost], ServiceConstants.NetworkingError>) -> Void) {
         
         /// Allows to use multiple keywords by encoding spaces proppertly.

@@ -28,8 +28,9 @@ class ImageDetailPresenterTests: XCTestCase {
     
     func testFetchCommentsCalled() {
         
-        sut?.updateImageDetail(with: "123", imageURL: URL(string: "www.apple.com"))
+        sut?.updateComments(with: "123")
         XCTAssertTrue(mockInteractor?.fetchCommentsCalled ?? false)
+        
     }
 
     override func tearDown() {

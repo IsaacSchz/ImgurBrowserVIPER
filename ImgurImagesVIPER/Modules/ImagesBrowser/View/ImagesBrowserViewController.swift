@@ -85,15 +85,15 @@ extension ImagesBrowserViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImgurPostCell", for: indexPath) as? ImgurPostCell, let postImageView = cell.postImage else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImgurPostCell", for: indexPath) as? ImgurPostCell else { return UITableViewCell() }
         
         guard let postInfo = posts?[indexPath.row] else { return UITableViewCell() }
-        cell.postId = postInfo.postId
-        cell.imageUrl = postInfo.imageUrl.absoluteString
-        postImageView.download(from: postInfo.imageUrl)
-        let ratio = postInfo.height / postInfo.width
-        let newHeight = tableView.bounds.size.width * CGFloat(ratio)
-        cell.hConstraint.constant = newHeight > 218 ? newHeight : 218
+        postInfo.setView(cell)
+        postInfo.downloadImageData()
+    
+        let tableViewWidth = Float(tableView.bounds.size.width)
+        let cellHeight = postInfo.getCellHeight(for: tableViewWidth)
+        cell.hConstraint.constant = CGFloat(cellHeight)
         cell.layoutIfNeeded()
         
         return cell
@@ -107,8 +107,8 @@ extension ImagesBrowserViewController: UITableViewDelegate {
         
         guard let post = posts?[indexPath.row] else { return }
         let postId = post.postId
-        let postImageUrl = post.imageUrl
-        let imageDetailView = ImageDetailWireframe(postId, postImageUrl)
+        let postImageData = post.imageData
+        let imageDetailView = ImageDetailWireframe(postId, postImageData)
         
         self.navigationController?.pushWireframe(imageDetailView, animated: true)
         
